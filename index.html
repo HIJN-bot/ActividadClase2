@@ -3,68 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Documentación de HTML5, CSS3 y JS">
-    <title>Tecnologías Web Básicas</title>
+    <title>Fortnite: El Futuro de la Victoria</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap');
+
+        :root {
+            --fn-purple: #8b44ff;
+            --fn-yellow: #f4ef13;
+            --fn-blue: #007bff;
+            --fn-dark: #0b0b0b;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--fn-dark);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Bebas Neue', cursive;
+            letter-spacing: 2px;
+        }
+
+        /* --- HEADER --- */
+        header {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: center;
+            border-bottom: 3px solid var(--fn-purple);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            width: 150px;
+            filter: drop-shadow(0 0 10px var(--fn-purple));
+        }
+
+        /* --- HERO SECTION (Introducción) --- */
+        .hero {
+            position: relative;
+            height: 90vh;
+            background: url('https://cdn2.unrealengine.com/fortnite-battle-royale-v21-20-social-1920x1080-690663434.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(11,11,11,1) 90%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 6rem;
+            margin: 0;
+            text-shadow: 5px 5px 0px var(--fn-purple);
+            line-height: 1;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: #ddd;
+            margin: 20px 0;
+            background: rgba(0,0,0,0.5);
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        /* --- SECCIÓN HITOS --- */
+        .section-padding { padding: 80px 10%; }
+        
+        .hitos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .hito-card {
+            background: #1a1a1a;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid #333;
+            transition: 0.3s;
+        }
+
+        .hito-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--fn-yellow);
+            box-shadow: 0 0 20px rgba(244, 239, 19, 0.3);
+        }
+
+        .hito-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .hito-content { padding: 25px; }
+        .hito-content h3 { font-size: 2rem; color: var(--fn-yellow); margin-top: 0; }
+
+        /* --- SECCIÓN FUTURO --- */
+        .futuro {
+            background: linear-gradient(45deg, #2c0054, #001233);
+            text-align: center;
+            border-radius: 30px;
+            margin: 50px 10%;
+            padding: 100px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .futuro h2 { font-size: 4rem; margin-bottom: 20px; }
+
+        /* --- BOTONES --- */
+        .btn {
+            background: var(--fn-yellow);
+            color: black;
+            padding: 18px 45px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+            border-radius: 12px;
+            display: inline-block;
+            box-shadow: 0 6px 0 #b3ac00;
+            transition: 0.1s;
+            text-transform: uppercase;
+        }
+
+        .btn:active {
+            transform: translateY(4px);
+            box-shadow: 0 2px 0 #b3ac00;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #555;
+            border-top: 1px solid #222;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Fundamentos del Desarrollo Web</h1>
+    <header>
+        <img src="https://cms-assets.unrealengine.com/AVzjeqAbLRKi3W5jq0CAvz/ovBnvmuJSxO5xtgXZcef" class="logo" alt="Fortnite F">
+    </header>
 
-    <p>El desarrollo web moderno se basa en la integración de tres pilares fundamentales que trabajan en armonía: HTML5 proporciona la estructura semántica y el significado del contenido; CSS3 se encarga de la capa estética y la adaptabilidad a dispositivos móviles mediante el diseño responsivo;
-         y JavaScript dota de interactividad y dinamismo a la interfaz, permitiendo que el usuario experimente una navegación fluida.
-        Juntas, estas tecnologías han evolucionado desde simples documentos de texto hasta convertirse en potentes aplicaciones web capaces de ejecutar multimedia y lógica compleja directamente en el navegador. </p>
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>BATALLA MAGISTRAL</h1>
+            <p>Sáltate las reglas, construye tu refugio y conviértete en el último en pie. Fortnite no es solo un juego, es un universo en constante evolución donde tú eres el protagonista.</p>
+            <a href="https://www.fortnite.com/?lang=es-ES" class="btn">¡CAER DEL BUS!</a>
+        </div>
+    </section>
 
-    <h2>Comparativa: HTML4 vs HTML5</h2>
-    <h1>Guía de Tecnologías Web</h1>
+    <section class="section-padding">
+        <h2 style="font-size: 3rem; text-align: center; color: var(--fn-purple);">HITOS LEGENDARIOS</h2>
+        <div class="hitos-grid">
+            <div class="hito-card">
+                <img src="https://www.gizlogic.com/wp-content/uploads/2018/05/Fortnite-Battle-Royale.jpg" alt="Lanzamiento">
+                <div class="hito-content">
+                    <h3>2017: EL ORIGEN</h3>
+                    <p>Fortnite Battle Royale llega al mundo, cambiando para siempre el género de los videojuegos con su mecánica de construcción única.</p>
+                </div>
+            </div>
+            <div class="hito-card">
+                <img src="https://cdn2.unrealengine.com/es-fortnite-og-1920x1080-f9cdcc1d914b.jpg" alt="OG">
+                <div class="hito-content">
+                    <h3>2023: REGRESO AL OG</h3>
+                    <p>El mapa original regresó, rompiendo récords históricos con más de 44 millones de jugadores en un solo día.</p>
+                </div>
+            </div>
+            <div class="hito-card">
+                <img src="https://i.ytimg.com/vi/hzaT-7W92Kg/sddefault.jpg" alt="Festival">
+                <div class="hito-content">
+                    <h3>EL MULTIVERSO</h3>
+                    <p>Fortnite se expande más allá del combate con LEGO Fortnite, Rocket Racing y Fortnite Festival.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <h2>1. Comparativa Tecnológica</h2>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Tecnología</th>
-                <th>Versión Anterior</th>
-                <th>Versión Actual</th>
-                <th>Mejora Clave</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Marcado</td>
-                <td>HTML4</td>
-                <td>HTML5</td>
-                <td>Semántica y Multimedia nativa</td>
-            </tr>
-            <tr>
-                <td>Estilos</td>
-                <td>CSS2.1</td>
-                <td>CSS3</td>
-                <td>Animaciones y Flexbox/Grid</td>
-            </tr>
-            <tr>
-                <td>Scripting</td>
-                <td>ES5</td>
-                <td>ES6+ (Modern JS)</td>
-                <td>Clases y Promesas</td>
-            </tr>
-        </tbody>
-    </table>
+    <section class="futuro">
+        <div style="position: relative; z-index: 2;">
+            <h2>EL FUTURO DE LA ISLA</h2>
+            <p style="font-size: 1.3rem; max-width: 700px; margin: 0 auto 40px auto;">
+                Con el motor Unreal Engine 5, el futuro de la programación permite mundos hiperrealistas y experiencias creadas por jugadores (UFEF). ¡Tú puedes ser el próximo creador de mapas legendarios!
+            </p>
+            <a href="https://www.unrealengine.com/es-ES/unreal-engine-5" class="btn" style="background: white; box-shadow: 0 6px 0 #ccc;">EXPLORAR EL CREATIVO</a>
+        </div>
+    </section>
 
-    <p>
-    <img src="imagenes/Youtube.jpg" width="415" height="395">
-    </p>
+    <footer>
+        <p>Este sitio es una creación temática para propósitos educativos. Fortnite es marca registrada de Epic Games, Inc.</p>
+    </footer>
 
-    <h2>Multimedia y Recursos</h2>
-    <p>Aprende más sobre estas tecnologías en este video:</p>
-    
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/MJkdaVFHrto?si=CES4FjBQz_6098rm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-    <p>Visita la documentación oficial en <a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a>.</p>
-
-    <img src="https://conecta.tec.mx/sites/default/files/styles/noticia_detalle/public/2020-04/computacion-programacion-codigo-lenguaje.jpg" alt="Representación de código de programación en una pantalla" width="400">
-
-    <p style="text-align:center; font-size:12px;">
-    Hecho por Andersson Castro - Grupo 1
-    </p>
-
-    </body>
+</body>
 </html>
